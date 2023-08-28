@@ -1,2 +1,2 @@
-Place Videos here to keep viewers waiting while videos are being generated, preferring very short videos to avoid wasting time.
+Place Videos here to keep viewers waiting while videos are being generated, preferring very short videos to avoid wasting time.   
 Placez ici les Vidéos pour faire attendre les spéctateur quand les vidéo sont en cours de génération, préféré des vidéos très courtes pour évitez de perdre du temps

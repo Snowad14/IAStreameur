@@ -1,2 +1,2 @@
-videos that have been generated and displayed, you can remove the saving of these videos in server.py with DELETE_MODE=True
+videos that have been generated and displayed, you can remove the saving of these videos in server.py with DELETE_MODE=True  
 vidéos qui ont été générées et affichées, vous pouvez supprimer l'enregistrement de ces vidéos dans server.py avec DELETE_MODE=True
