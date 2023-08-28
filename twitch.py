@@ -18,7 +18,7 @@ class Queue:
 class Bot(commands.Bot):
 
     def __init__(self):
-        super().__init__(token=os.getenv("TWITCH_TOKEN"), prefix='!', initial_channels=['#snowad14'])
+        super().__init__(token=os.getenv("TWITCH_TOKEN"), prefix='!', initial_channels=["#" + os.getenv("STREAMER_PSEUDO")])
         self.message_queue = Queue(5)
 
     async def event_ready(self):

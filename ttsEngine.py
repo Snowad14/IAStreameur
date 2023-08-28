@@ -4,7 +4,7 @@ from elevenlabs import generate, play
 def gen_elevenlabs(text):
     audio = generate(
         text=text,
-        voice="Callum",
+        voice=os.getenv("ELEVENLABS_VOICE"),
         model="eleven_multilingual_v2",
         api_key=os.getenv("ELEVENLABS_KEY")
     )
