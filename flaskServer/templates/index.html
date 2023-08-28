@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+  </head>
+
+  <body>
+
+    <video id="videoPlayer" controls autoplay>
+      Your browser does not support the video tag.
+    </video>
+
+    <script>
+      const videoPlayer = document.getElementById('videoPlayer');
+
+      async function fetchVideo() {
+          try {
+              let response = await fetch('/get_video');
+              let data = await response.json();
+
+              if (data.video_path) {
+                  videoPlayer.src = data.video_path;
+              }
+              if (data.text) {
+                  document.querySelector('.question').innerHTML = data.text;
+              }
+              else {
+                  document.querySelector('.question').innerHTML = 'En attente de traitement de la question...';
+              }
+          } catch (error) {
+              console.error('Error fetching video:', error);
+          }
+      }
+
+      videoPlayer.onended = async function() {
+          console.log('Video ended');
+          let videoId = videoPlayer.src.split('/');
+          videoId = videoId[videoId.length - 1];
+          try {
+              // Supprimer la vidéo actuelle
+              await fetch(`/delete_video/${videoId}`, { method: 'DELETE' });
+              // Charger la prochaine vidéo
+              await fetchVideo();
+          } catch (error) {
+              console.error('Error deleting video:', error);
+          }
+      };
+
+      // Charger la première vidéo
+      fetchVideo();
+    </script>
+
+    <div class="vjs-overlay">
+      <div class="question">
+        Bonjour
+      </div>
+    </div>
+
+  </body>
+
+</html>

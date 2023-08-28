@@ -1,0 +1,11 @@
+# do a pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+librosa
+numpy
+opencv-contrib-python
+opencv-python
+tqdm
+numba
+flask
+elevenlabs
+openai
+python-dotenv
