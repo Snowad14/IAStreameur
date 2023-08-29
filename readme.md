@@ -27,15 +27,16 @@ STREAMER_PSEUDO="squeezie"
 **Ensuite**, vous allez ajouté vos vidéo en format **mp4** de la personne voulu dans ```IA_Speaker\simpleWav2Lip\sample_data\videos```.  
 **N'oubliez pas**, d'ajouter vos vidéos en format **mp4** de quelque chose pour combler le stream pendant la génération de la vidéo, mettez la dans ```IA_Speaker\flaskServer\static\waiting```.  
 Enfin, vous allez **modifier votre raccourcie chrome** pour y ajouter ```--autoplay-policy=no-user-gesture-required```  
+Avant de lancez, pour rendre la génération **10x plus rapide**, vous devez mettre en cache l'output du detector, pour se faire, vous devez ouvrir un terminal dans le dossier ```simpleWav2Lip``` pour ensuite faire un ```python cacheVideo.py```, vous devrez **refaire cette opération** a chaque fois que vous modifier ou ajouter une vidéo !     
 Il ne vous reste plus que lancez les **programmes python dans 2 terminal différent :** ```python server.py``` dans ```IA_Speaker\flaskServer``` et ```python main.py```   
-Libre a vous de modifier le fichier **base.css** pour **modifier ou ajouter des choses a l'overlay**, j'ai fait très simple avec juste la question
+Libre a vous de modifier le fichier ```base.css``` pour **modifier ou ajouter des choses a l'overlay**, j'ai fait très simple avec juste la question
 
 
 ## TODO 📝
 
 - [ ]  Ajouter LLama ou au moins une alternative gratuite a gpt
 - [ ]  Ajouter une alternative a 11Labs genre VITS+RVC
-- [ ]  Speed Up Wav2Lips
+- [x]  Speed Up Wav2Lips
 
 ## Remerciements
 
