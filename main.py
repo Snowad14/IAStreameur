@@ -6,7 +6,7 @@ from utils import Config
 from dotenv import load_dotenv; load_dotenv()
 from llmEngine import gen_gpt
 from ttsEngine import gen_elevenlabs, gen_RVC, gen_Edge, gen_VITS
-import wav2lipEngine, asyncio
+import wav2lipEngine, asyncio, random
 
 if __name__ == "__main__":
 

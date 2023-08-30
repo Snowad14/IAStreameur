@@ -19,12 +19,12 @@ def gen_elevenlabs(text):
 
 def gen_RVC():
     modelName = Config.get_value("rvc_name")
-    result = rvcGenerator.applyRVC(
+    result, sr = rvcGenerator.applyRVC(
         model_path=f"voiceModels/rvcModels/{modelName}.pth",
         file_index=f"voiceModels/rvcModels/{modelName}.index",
         input_audio_path=audioPath,
     )
-    wavfile.write(audioPath, 40000, result)
+    wavfile.write(audioPath, sr, result)
 
 def gen_VITS(text):
     api = TTS("tts_models/fra/fairseq/vits")

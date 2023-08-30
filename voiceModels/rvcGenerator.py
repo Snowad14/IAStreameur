@@ -138,7 +138,7 @@ def applyRVC(
     input_audio_path=None,
     f0_up_key=0,
     f0_file=None,
-    f0_method="harvest",
+    f0_method="crepe",
     file_index="",
     file_index2="",
     index_rate=1.0,
@@ -202,7 +202,7 @@ def applyRVC(
         protect=protect,
     )
 
-    return audio_opt
+    return audio_opt, tgt_sr
 
     # wavfile.write(output_path, tgt_sr, audio_opt)
     # return "processed"

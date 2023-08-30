@@ -11,4 +11,4 @@ elevenlabs_voice: "Callum"
 edgetts_voice: "fr-CH-FabriceNeural"
 
 # (Laissez vide si vous ne voulez pas utilisez RVC) Nom du modèle RVC du dossier voiceModels/rvcModels, l'index et le modèle doit avoir le meme nom. Exemple : "macron" -> macron.pth & macron.index
-rvc_name: ""
+rvc_name: "macron"
