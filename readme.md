@@ -23,7 +23,7 @@ ELEVENLABS_KEY = "VOTRE_CLE_ELEVENLABS" # Laissez vite si vous n'utilisez pas El
 OPENAI_KEY = "VOTRE_CLE_OPENAI"
 TWITCH_TOKEN = "VOTRE_OAUTH_TWITCH"
 ```  
-**Modifier config.yaml**, tous est indiqué dedans sur comment choisir les différent TTS/configuré sur quelle streameur le bot va regardé le chat..etc
+**Modifier config.yaml**, tous est indiqué dedans sur comment choisir les différent TTS/configuré sur quelle streameur le bot va regardé le chat..etc   
 **Ensuite**, vous allez ajouté vos vidéo en format **mp4** de la personne voulu dans ```IA_Speaker\simpleWav2Lip\sample_data\videos```.  
 **N'oubliez pas**, d'ajouter vos vidéos en format **mp4** de quelque chose pour combler le stream pendant la génération de la vidéo, mettez la dans ```IA_Speaker\flaskServer\static\waiting```.  
 Enfin, vous allez **modifier votre raccourcie chrome** pour y ajouter ```--autoplay-policy=no-user-gesture-required```  
