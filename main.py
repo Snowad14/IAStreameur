@@ -48,7 +48,7 @@ if __name__ == "__main__":
                 writer.write(f"{message.author.name} : {message.content}")
             logger.info(f"Video generated")
         except Exception as e:
-            logger.warn(f"Error while generating : {e}")
+            logger.warning(f"Error while generating {e}")
 
 
 

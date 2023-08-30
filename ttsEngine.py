@@ -11,8 +11,8 @@ audioPath = "simpleWav2Lip/sample_data/test.wav"
 def gen_elevenlabs(text):
     audio = generate(
         text=text,
-        voice=os.getenv("ELEVENLABS_VOICE"),
-        model=Config.get_value("elevenlabs_voice"),
+        voice=Config.get_value("elevenlabs_voice"),
+        model="eleven_multilingual_v2",
         api_key=os.getenv("ELEVENLABS_KEY")
     )
     open(audioPath, "wb").write(audio)
