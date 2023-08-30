@@ -9,3 +9,5 @@ flask
 elevenlabs
 openai
 python-dotenv
+edge_tts
+TTS

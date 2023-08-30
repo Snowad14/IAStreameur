@@ -9,7 +9,6 @@ DELETE_MODE = False
 
 @app.route('/get_video')
 def get_video():
-    # Vérifier si des vidéos sont présentes dans le dossier queue
     queue_videos = [f for f in glob.glob(f"{QUEUE_DIR}/*.mp4")]
     if queue_videos:
         txtContent = open(f"{queue_videos[0].replace('.mp4', '.txt')}", "r").read()

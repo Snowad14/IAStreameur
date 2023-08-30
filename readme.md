@@ -16,14 +16,14 @@ Crée un **environnement anaconda** : ```conda create -n IASpeaker```, puis on l
 Installer **pytorch avec cuda** : ```pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118```   
 **Télécharger le .zip du repo** et extrayer le, ouvrez le pour enfin éxécuter la commande ```pip install -r requirements.txt```  
 Maintenant il faut **télécharger les modèles d'IA :** [wav2lip.pth](https://iiitaphyd-my.sharepoint.com/personal/radrabha_m_research_iiit_ac_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fradrabha%5Fm%5Fresearch%5Fiiit%5Fac%5Fin%2FDocuments%2FWav2Lip%5FModels%2Fwav2lip%2Epth&parent=%2Fpersonal%2Fradrabha%5Fm%5Fresearch%5Fiiit%5Fac%5Fin%2FDocuments%2FWav2Lip%5FModels&ga=1) dans ```IA_Speaker\simpleWav2Lip\checkpoints``` et [s3fd-619a316812.pth](https://www.adrianbulat.com/downloads/python-fan/s3fd-619a316812.pth) renommé en ```s3fd.pth``` dans ```IA_Speaker\simpleWav2Lip\face_detection\detection\sfd```  
+**Si vous voulez utilisez RVC**, mettez [hubert_base.pt](https://huggingface.co/spaces/zomehwh/rvc-models/resolve/main/hubert_base.pt) dans ```IA_Speaker\voiceModels\rvcModels```, avec a coté le ```.index``` et le ```.pth du modèle```    
 **Crée le fichier** : ```IA_Speaker/.env``` avec vos clée api, le pseudo du streamer, le **nom de la voix** que vous avez crée sur le panel d'ElevenLabs, comme ceci :   
 ```bash
-ELEVENLABS_KEY = "VOTRE_CLE_ELEVENLABS"
+ELEVENLABS_KEY = "VOTRE_CLE_ELEVENLABS" # Laissez vite si vous n'utilisez pas ElevenLabs
 OPENAI_KEY = "VOTRE_CLE_OPENAI"
 TWITCH_TOKEN = "VOTRE_OAUTH_TWITCH"
-ELEVENLABS_VOICE="Macron"
-STREAMER_PSEUDO="squeezie"
 ```  
+**Modifier config.yaml**, tous est indiqué dedans sur comment choisir les différent TTS/configuré sur quelle streameur le bot va regardé le chat..etc
 **Ensuite**, vous allez ajouté vos vidéo en format **mp4** de la personne voulu dans ```IA_Speaker\simpleWav2Lip\sample_data\videos```.  
 **N'oubliez pas**, d'ajouter vos vidéos en format **mp4** de quelque chose pour combler le stream pendant la génération de la vidéo, mettez la dans ```IA_Speaker\flaskServer\static\waiting```.  
 Enfin, vous allez **modifier votre raccourcie chrome** pour y ajouter ```--autoplay-policy=no-user-gesture-required```  
@@ -34,8 +34,9 @@ Libre a vous de modifier le fichier ```base.css``` pour **modifier ou ajouter de
 
 ## TODO 📝
 
+- [ ]  Comprendre pourquoi le logger envoie 2x les message
 - [ ]  Ajouter LLama ou au moins une alternative gratuite a gpt
-- [ ]  Ajouter une alternative a 11Labs genre VITS+RVC
+- [x]  Ajouter une alternative a 11Labs genre VITS+RVC
 - [x]  Speed Up Wav2Lips
 
 ## Remerciements

@@ -1,0 +1,14 @@
+# Le pseudo twitch de la chaine ou le bot va prendre les questions du chat
+twitch_username: "snowad14"
+
+# Le type de TTS utilisé, cela peut etre "EdgeTTS", "VITS" ou "ElevenLabs" (le meilleur mais payant)
+tts_type: "EdgeTTS"
+
+# Le nom de la voix de elevenLabs (vous pouvez la trouvez dans le panel), laissez vide si vous n'utilisez pas elevenlabs
+elevenlabs_voice: ""
+
+# Nom du narrateur EdgeTTS (vous pouvez les retrouvez sur pastebin.com/raw/n2Y4MVtg)
+edgetts_voice: "fr-CH-FabriceNeural"
+
+# (Laissez vide si vous ne voulez pas utilisez RVC) Nom du modèle RVC du dossier voiceModels/rvcModels, l'index et le modèle doit avoir le meme nom. Exemple : "macron" -> macron.pth & macron.index
+rvc_name: "macron"

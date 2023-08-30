@@ -1,8 +1,10 @@
 import openai, os
 from logging import getLogger; logger = getLogger('AIStreamer')
 
-def gen_gpt(text):
+def gen_gpt(message):
     openai.api_key = os.getenv("OPENAI_KEY")
+    text = message.content
+    author = message.author.name
 
     prompt = [
         {"role": "system", "content": """
@@ -11,7 +13,7 @@ def gen_gpt(text):
         Tu dois répondre de manière drole, taquin et satirique.
         Fais des réponses assez courtes. Reformule toujours la question qui t'es posé
         """},
-        {"role": "user", "content": f"Message : {text}"}
+        {"role": "user", "content": f"Le viewer {author} dit : {text}"}
     ]
 
     try:
