@@ -11,4 +11,5 @@ def create_logger(name):
     badLoggers = ["faiss.loader", "fairseq.tasks.hubert_pretraining", __name__, "twitchio.websocket"]
     for logName in badLoggers:
         logging.getLogger(logName).setLevel(logging.CRITICAL)
+    logger.propagate = False
     return logger
